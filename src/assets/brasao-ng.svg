@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Brasão N e G</title>
+  <desc id="desc">Monograma N e G com ramos delicados em tons oliva e castanho.</desc>
+  <defs>
+    <linearGradient id="ink" x1="64" y1="40" x2="256" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9fa082"/>
+      <stop offset="0.48" stop-color="#83501f"/>
+      <stop offset="1" stop-color="#5f3718"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" rx="160" fill="#fbf7ef"/>
+  <circle cx="160" cy="160" r="132" fill="none" stroke="#9fa082" stroke-width="7"/>
+  <circle cx="160" cy="160" r="116" fill="none" stroke="#c7a7d3" stroke-width="2" opacity="0.65"/>
+  <path d="M78 177c-5-36 7-69 32-91 23-20 55-27 86-18" fill="none" stroke="#69715a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M242 143c6 38-8 72-35 94-24 19-57 25-87 15" fill="none" stroke="#83501f" stroke-width="6" stroke-linecap="round"/>
+  <path d="M96 106c-16-14-30-15-42-3 18 2 28 11 31 27 8-4 12-12 11-24Z" fill="#9fa082"/>
+  <path d="M221 218c17 13 31 13 42 0-18-1-29-9-33-25-7 5-11 13-9 25Z" fill="#83501f"/>
+  <path d="M237 116c16-3 26-12 30-27-16 4-25 13-28 29" fill="none" stroke="#83501f" stroke-width="5" stroke-linecap="round"/>
+  <path d="M80 219c-16 4-26 14-29 30 16-5 25-15 27-31" fill="none" stroke="#69715a" stroke-width="5" stroke-linecap="round"/>
+  <text x="85" y="199" fill="url(#ink)" font-family="Georgia, 'Times New Roman', serif" font-size="128" font-style="italic" font-weight="700">N</text>
+  <text x="144" y="224" fill="url(#ink)" font-family="Georgia, 'Times New Roman', serif" font-size="126" font-style="italic" font-weight="700">G</text>
+  <path d="M84 246c24 17 55 23 86 16" fill="none" stroke="#9fa082" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+  <path d="M234 76c-24-16-55-20-84-12" fill="none" stroke="#83501f" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+</svg>
