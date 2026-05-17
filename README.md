@@ -55,3 +55,9 @@ O arquivo `wrangler.toml` já aponta a saída para `./dist`, caso você prefira 
 - `/confirmar` permite que convidados pesquisem o nome e confirmem presença por pessoa.
 - `/presentes` mostra presentes com Pix e Mercado Pago.
 - `/admin` permite editar conteúdo, evento, convidados, presentes, fotos e exportar confirmados em CSV.
+
+## Segurança do admin
+
+O painel `/admin` exige login por e-mail e senha do Supabase. Se as variáveis `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` não estiverem configuradas, o painel fica bloqueado em vez de abrir em modo demonstração.
+
+Uploads de fotos feitos pelo painel são salvos no bucket público `wedding-media` e registrados na tabela `photos`, para aparecerem na página inicial após atualizar o site.

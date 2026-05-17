@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import crest from "../assets/brasao-ng.svg";
 
 const links = [
@@ -12,10 +12,12 @@ const links = [
 
 export function SiteShell() {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   return (
-    <div className="site-shell">
-      <header className="topbar">
+    <div className={isHome ? "site-shell home-shell" : "site-shell"}>
+      {!isHome && <header className="topbar">
         <NavLink to="/" className="brand" aria-label="Ir para a página inicial">
           <img src={crest} alt="" />
           <span>N & G</span>
@@ -37,7 +39,7 @@ export function SiteShell() {
             </NavLink>
           ))}
         </nav>
-      </header>
+      </header>}
 
       <main>
         <Outlet />

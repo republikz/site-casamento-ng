@@ -49,7 +49,7 @@ const tabs: { id: AdminTab; label: string }[] = [
 export function AdminPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [authed, setAuthed] = useState(!isSupabaseConfigured);
+  const [authed, setAuthed] = useState(false);
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
   const [activeTab, setActiveTab] = useState<AdminTab>("conteudo");
   const [loading, setLoading] = useState(true);
@@ -60,13 +60,10 @@ export function AdminPage() {
   useEffect(() => {
     async function boot() {
       try {
-        if (isSupabaseConfigured) {
-          const user = await getCurrentAdmin();
-          setAuthed(Boolean(user));
-          if (user) setSnapshot(await getAdminSnapshot());
-        } else {
-          setSnapshot(await getAdminSnapshot());
-        }
+        if (!isSupabaseConfigured) return;
+        const user = await getCurrentAdmin();
+        setAuthed(Boolean(user));
+        if (user) setSnapshot(await getAdminSnapshot());
       } catch (err) {
         setError(err instanceof Error ? err.message : "Erro ao carregar admin.");
       } finally {
@@ -108,8 +105,8 @@ export function AdminPage() {
 
   async function handleLogout() {
     await signOutAdmin();
-    setAuthed(!isSupabaseConfigured);
-    if (isSupabaseConfigured) setSnapshot(null);
+    setAuthed(false);
+    setSnapshot(null);
   }
 
   async function runAction(action: () => Promise<void>, success: string) {
@@ -136,6 +133,11 @@ export function AdminPage() {
           <img src={crest} alt="" />
           <p className="eyebrow">Painel dos noivos</p>
           <h1>Entrar no admin</h1>
+          {!isSupabaseConfigured && (
+            <div className="notice error">
+              O admin está bloqueado. Configure o Supabase e crie seu usuário por e-mail antes de usar este painel.
+            </div>
+          )}
           <label>
             E-mail
             <input value={email} onChange={(event) => setEmail(event.target.value)} type="email" required />
@@ -172,7 +174,6 @@ export function AdminPage() {
           </div>
         </div>
         <div className="admin-actions">
-          {!isSupabaseConfigured && <span className="demo-pill">Modo demonstração local</span>}
           <Link className="secondary-action" to="/">
             <ArrowLeft aria-hidden />
             Ver site

@@ -1037,3 +1037,514 @@ button.secondary-action {
     grid-template-columns: 1fr;
   }
 }
+
+/* Invitation reference layout */
+.home-shell {
+  background: #f4ede5;
+}
+
+.home-shell main {
+  z-index: 0;
+}
+
+.home-shell .footer {
+  display: none;
+}
+
+.invitation-page {
+  background: #f4ede5;
+  color: #35513a;
+  overflow: hidden;
+}
+
+.invite-hero {
+  align-items: center;
+  background: #35513a;
+  color: #ead9bf;
+  display: grid;
+  grid-template-columns: 1.08fr 0.9fr 0.58fr;
+  min-height: 720px;
+  padding: 92px 70px 82px;
+  position: relative;
+}
+
+.invite-hero-copy h1 {
+  color: #ead9bf;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(4.6rem, 10vw, 8.4rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.88;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.script-and {
+  color: #d7cbb6;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 4.1rem;
+  font-style: italic;
+  line-height: 0.6;
+  margin: 0.2rem 0 0 2.2rem;
+}
+
+.invite-kicker {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  margin: 2.5rem 0 0;
+  opacity: 0.74;
+  text-align: center;
+  text-transform: uppercase;
+  width: min(420px, 100%);
+}
+
+.invite-meta {
+  align-items: center;
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr;
+  margin-top: 1.25rem;
+  max-width: 460px;
+  text-align: center;
+}
+
+.invite-meta span {
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.invite-meta i {
+  background: rgba(234, 217, 191, 0.58);
+  height: 58px;
+  width: 1px;
+}
+
+.invite-sprig {
+  align-self: start;
+  justify-self: center;
+  margin-top: 28px;
+  max-width: 430px;
+  opacity: 0.88;
+  width: 100%;
+}
+
+.invite-rsvp {
+  align-self: center;
+  color: #ead9bf;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 700;
+  justify-self: end;
+  line-height: 0.9;
+  padding-bottom: 0.55rem;
+  position: relative;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-underline-offset: 0.18em;
+}
+
+.invite-rsvp::after {
+  background: rgba(234, 217, 191, 0.55);
+  bottom: -1rem;
+  content: "";
+  height: 2px;
+  left: -1.5rem;
+  position: absolute;
+  right: -1.5rem;
+}
+
+.invite-photos {
+  align-items: center;
+  background: #f4ede5;
+  display: grid;
+  gap: clamp(1.4rem, 4vw, 4rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: center;
+  padding: 96px clamp(1.5rem, 7vw, 5rem);
+}
+
+.oval-photo,
+.arch-card {
+  aspect-ratio: 0.72;
+  border: 2px solid rgba(53, 81, 58, 0.5);
+  margin: 0;
+  max-width: 320px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.oval-photo {
+  border-radius: 50%;
+  background: #e4d8cd;
+}
+
+.oval-photo img,
+.wedding-card-photo img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.photo-empty {
+  align-items: center;
+  background: linear-gradient(#e6ddd2, #f8f1e9);
+  color: rgba(53, 81, 58, 0.55);
+  display: flex;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.35rem;
+  height: 100%;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.arch-card {
+  background: linear-gradient(#bdebf8 0 50%, #cae577 50% 100%);
+  border-radius: 160px 160px 0 0;
+  position: relative;
+}
+
+.cloud {
+  background: #fff;
+  border-radius: 999px;
+  height: 42px;
+  left: 27%;
+  position: absolute;
+  top: 23%;
+  width: 46%;
+}
+
+.cloud::before,
+.cloud::after {
+  background: #fff;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+}
+
+.cloud::before {
+  height: 76px;
+  left: 27%;
+  top: -42px;
+  width: 76px;
+}
+
+.cloud::after {
+  height: 52px;
+  left: 2%;
+  top: -20px;
+  width: 52px;
+}
+
+.hill {
+  border-radius: 50% 50% 0 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.hill-back {
+  background: #b6dc41;
+  height: 28%;
+  left: -15%;
+  width: 130%;
+}
+
+.hill-front {
+  background: #78a800;
+  height: 23%;
+  left: 0;
+  width: 100%;
+}
+
+.journey-section {
+  background: #35513a;
+  color: #ead9bf;
+  padding: 88px 24px 98px;
+  text-align: center;
+}
+
+.journey-section img {
+  height: 58px;
+  object-fit: contain;
+  opacity: 0.72;
+  width: 58px;
+}
+
+.journey-section h2,
+.wedding-section h2,
+.event-band h2,
+.faq-section h2,
+.contact-band h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.9;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.journey-section h2 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  margin-top: 1.4rem;
+}
+
+.script-word {
+  color: rgba(234, 217, 191, 0.68);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.8rem, 6vw, 4.7rem);
+  font-style: italic;
+  line-height: 0.6;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.journey-section p:last-child {
+  color: rgba(244, 237, 229, 0.86);
+  font-size: 0.98rem;
+  line-height: 1.45;
+  margin: 2.5rem auto 0;
+  max-width: 560px;
+}
+
+.wedding-section {
+  background: #f4ede5;
+  padding: 72px clamp(1.5rem, 6vw, 4.5rem) 86px;
+  text-align: center;
+}
+
+.wedding-section h2 {
+  color: #35513a;
+  font-size: clamp(3.2rem, 7vw, 5.5rem);
+  margin-bottom: 54px;
+}
+
+.wedding-cards {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3.2rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.wedding-card {
+  color: #5a6a59;
+}
+
+.wedding-card-photo {
+  aspect-ratio: 1.85;
+  background: #d9d2ca;
+  border: 2px solid rgba(53, 81, 58, 0.45);
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.wedding-card-photo span {
+  background:
+    linear-gradient(135deg, rgba(53, 81, 58, 0.18), transparent),
+    #dfd8cf;
+  display: block;
+  height: 100%;
+}
+
+.wedding-card h3 {
+  color: #35513a;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.24em;
+  margin: 1.1rem 0 0.45rem;
+  text-transform: uppercase;
+}
+
+.wedding-card p {
+  color: #687267;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  margin: 0 auto;
+  max-width: 290px;
+}
+
+.event-band {
+  align-items: center;
+  background: #c9abd0;
+  color: #35513a;
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 0.95fr 1.05fr;
+  min-height: 520px;
+  padding: 76px clamp(1.8rem, 6vw, 4.5rem);
+}
+
+.event-band h2 {
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+}
+
+.event-band h2 span {
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.event-band p {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  margin-top: 2.8rem;
+  text-transform: uppercase;
+}
+
+.event-band ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.event-band li {
+  border-top: 2px solid rgba(53, 81, 58, 0.55);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  padding: 1.05rem 0;
+  text-transform: uppercase;
+}
+
+.event-band li:last-child {
+  border-bottom: 2px solid rgba(53, 81, 58, 0.55);
+}
+
+.event-band li span {
+  display: inline-block;
+  margin-right: 1.4rem;
+}
+
+.faq-section {
+  background: #35513a;
+  color: #ead9bf;
+  padding: 78px 24px 86px;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: clamp(3.7rem, 8vw, 6.5rem);
+  margin-bottom: 2.2rem;
+}
+
+.faq-section h3 {
+  color: #d7cbb6;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  margin: 1.8rem auto 0.55rem;
+  text-transform: uppercase;
+}
+
+.faq-section p {
+  color: rgba(244, 237, 229, 0.86);
+  font-size: 0.95rem;
+  line-height: 1.35;
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+.contact-band {
+  align-items: center;
+  background: #83501f;
+  color: #ead9bf;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 330px;
+  padding: 64px clamp(1.8rem, 6vw, 4.5rem) 86px;
+}
+
+.contact-band h2 {
+  font-size: clamp(3.4rem, 8vw, 6.2rem);
+  margin-bottom: 120px;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(2, minmax(0, 260px));
+}
+
+.contact-grid address {
+  display: grid;
+  font-style: normal;
+  gap: 0.28rem;
+}
+
+.contact-grid strong {
+  font-size: 1.05rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.contact-grid span {
+  color: rgba(244, 237, 229, 0.82);
+  font-size: 0.88rem;
+}
+
+.contact-band > img {
+  opacity: 0.9;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .invite-hero,
+  .event-band,
+  .contact-band {
+    grid-template-columns: 1fr;
+  }
+
+  .invite-hero {
+    min-height: auto;
+    padding: 58px 28px 64px;
+  }
+
+  .invite-sprig {
+    max-width: 320px;
+  }
+
+  .invite-rsvp {
+    justify-self: start;
+  }
+
+  .invite-photos,
+  .wedding-cards,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .oval-photo,
+  .arch-card {
+    max-width: 280px;
+  }
+
+  .contact-band h2 {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .invite-hero-copy h1 {
+    font-size: 4.15rem;
+  }
+
+  .invite-meta {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .invite-meta i {
+    display: none;
+  }
+
+  .event-band li span {
+    display: block;
+    margin: 0 0 0.25rem;
+  }
+}

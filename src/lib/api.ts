@@ -241,10 +241,11 @@ export async function uploadPhoto(file: File, title: string): Promise<Photo> {
   const id = crypto.randomUUID();
 
   if (!isSupabaseConfigured || !supabase) {
+    const imageUrl = await fileToDataUrl(file);
     const photo: Photo = {
       id,
       title,
-      image_url: URL.createObjectURL(file),
+      image_url: imageUrl,
       alt_text: title,
       sort_order: Date.now(),
     };
@@ -275,7 +276,9 @@ export async function uploadPhoto(file: File, title: string): Promise<Photo> {
 }
 
 export async function signInAdmin(email: string, password: string) {
-  if (!supabase) return null;
+  if (!supabase) {
+    throw new Error("Configure o Supabase antes de acessar o painel admin.");
+  }
   const { data, error } = await supabase.auth.signInWithPassword({ email, password });
   if (error) throw error;
   return data.user;
@@ -290,4 +293,13 @@ export async function getCurrentAdmin() {
   if (!supabase) return null;
   const { data } = await supabase.auth.getUser();
   return data.user;
+}
+
+function fileToDataUrl(file: File) {
+  return new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result));
+    reader.onerror = () => reject(reader.error);
+    reader.readAsDataURL(file);
+  });
 }

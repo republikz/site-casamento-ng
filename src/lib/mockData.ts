@@ -1,4 +1,3 @@
-import crest from "../assets/brasao-ng.svg";
 import type { EventDetails, Gift, Invitation, Photo, SiteContent } from "./types";
 
 export const defaultContent: SiteContent = {
@@ -26,15 +25,7 @@ export const defaultEvent: EventDetails = {
     "Chegue com alguns minutos de antecedência para encontrar seu lugar com calma. Novas informações podem ser atualizadas aqui.",
 };
 
-export const defaultPhotos: Photo[] = [
-  {
-    id: "photo-crest",
-    title: "Brasão do casamento",
-    image_url: crest,
-    alt_text: "Brasão N e G do casamento",
-    sort_order: 1,
-  },
-];
+export const defaultPhotos: Photo[] = [];
 
 export const defaultGifts: Gift[] = [
   {
